@@ -12,6 +12,7 @@
 		361CBD8B2281498200ED75EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 361CBD8A2281498200ED75EB /* Assets.xcassets */; };
 		361CBD8E2281498200ED75EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 361CBD8C2281498200ED75EB /* LaunchScreen.storyboard */; };
 		361CBD9D2281595F00ED75EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 361CBD9B2281595F00ED75EB /* Main.storyboard */; };
+		361CBD9F228176BC00ED75EB /* M3u8ResourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361CBD9E228176BC00ED75EB /* M3u8ResourceLoader.swift */; };
 		83C198242FCE8CF44A7C0502 /* Pods_Video_Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46690DCCEB994C667D95BE83 /* Pods_Video_Player.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		361CBD8D2281498200ED75EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		361CBD8F2281498200ED75EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		361CBD9C2281595F00ED75EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		361CBD9E228176BC00ED75EB /* M3u8ResourceLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M3u8ResourceLoader.swift; sourceTree = "<group>"; };
 		46690DCCEB994C667D95BE83 /* Pods_Video_Player.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Video_Player.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE222967E8A8DD02A01146AE /* Pods-Video-Player.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Video-Player.release.xcconfig"; path = "Target Support Files/Pods-Video-Player/Pods-Video-Player.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +65,7 @@
 			children = (
 				361CBD832281497F00ED75EB /* AppDelegate.swift */,
 				361CBD852281497F00ED75EB /* ViewController.swift */,
+				361CBD9E228176BC00ED75EB /* M3u8ResourceLoader.swift */,
 				361CBD8A2281498200ED75EB /* Assets.xcassets */,
 				361CBD9B2281595F00ED75EB /* Main.storyboard */,
 				361CBD8C2281498200ED75EB /* LaunchScreen.storyboard */,
@@ -187,6 +190,7 @@
 			files = (
 				361CBD862281497F00ED75EB /* ViewController.swift in Sources */,
 				361CBD842281497F00ED75EB /* AppDelegate.swift in Sources */,
+				361CBD9F228176BC00ED75EB /* M3u8ResourceLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
