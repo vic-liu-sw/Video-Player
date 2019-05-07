@@ -9,13 +9,20 @@
 import UIKit
 import AVKit
 
+protocol AvPlayerDelegate {
+    func avplayString(m3u8:String) -> String
+}
+
+var newM3u8: String?
 let apple_m3u8 = "#EXTM3U\n#EXT-X-PLAYLIST-TYPE:EVENT\n#EXT-X-TARGETDURATION:10\n#EXT-X-VERSION:3\n#EXT-X-MEDIA-SEQUENCE:0\n#EXTINF:10, no desc\n#EXT-X-KEY:METHOD=AES-128,URI=\"ckey://devimages.apple.com/samplecode/AVARLDelegateDemo/BipBop_gear3_segmented/crypt0.key\", IV=0x3ff5be47e1cdbaec0a81051bcc894d63\nrdtp://devimages.apple.com/samplecode/AVARLDelegateDemo/BipBop_gear3_segmented/fileSequence0.ts\n#EXTINF:10, no desc\nrdtp://devimages.apple.com/samplecode/AVARLDelegateDemo/BipBop_gear3_segmented/fileSequence1.ts\n#EXTINF:10, no desc\nrdtp://devimages.apple.com/samplecode/AVARLDelegateDemo/BipBop_gear3_segmented/fileSequence2.ts\n#EXTINF:10, no desc\nrdtp://devimages.apple.com/samplecode/AVARLDelegateDemo/BipBop_gear3_segmented/fileSequence3.ts\n#EXTINF:10, no desc\nrdtp://devimages.apple.com/samplecode/AVARLDelegateDemo/BipBop_gear3_segmented/fileSequence4.ts\n#EXT-X-ENDLIST"
 
 
 class M3u8ResourceLoader: NSObject, AVAssetResourceLoaderDelegate {
 
+    var delegate: AvPlayerDelegate?
     /// 假的链接(乱写的，前缀反正不要http或者https，后缀一定要.m3u8，中间随便)
     //fileprivate let m3u8_url_vir = "m3u8Scheme://abcd.m3u8"
+
     fileprivate let m3u8_url_vir = "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"
     /// 真的链接
     fileprivate var m3u8_url: String = ""

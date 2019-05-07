@@ -8,6 +8,8 @@
 
 import UIKit
 import AVFoundation
+
+
 class ViewController: UIViewController {
 
     var searchBar: UISearchBar!
@@ -15,7 +17,7 @@ class ViewController: UIViewController {
     var playButton:UIButton!
     var pauseButton:UIButton!
     var serrchController: UISearchController!
-    var newM3u8: String?
+//    var newM3u8: String?
 
     var playerItem: AVPlayerItem!
     var playerLayer: AVPlayerLayer!
@@ -82,6 +84,8 @@ class ViewController: UIViewController {
         playerLayer.contentsScale = UIScreen.main.scale
         playerLayer.frame = UIScreen.main.bounds
 
+        
+
     }
 
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -112,9 +116,11 @@ class ViewController: UIViewController {
 
     @objc func play(_ sender: UIButton) {
 
-        var sampleM3u8 = "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"
-        newM3u8 = avplayString(m3u8: sampleM3u8)
-        searchBar.text = newM3u8
+        let sampleM3u8 = "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"
+       // newM3u8 = avplayString(m3u8: sampleM3u8)
+
+       // self.M3u8ResourceLoader.avplayString(sampleM3u8)
+        searchBar.text = sampleM3u8
         view.layer.insertSublayer(playerLayer, at: 0)
 
         if sender.isEnabled {
@@ -131,13 +137,13 @@ class ViewController: UIViewController {
         player.pause()
     }
 
-    func avplayString(m3u8:String) -> String {
 
-        return m3u8
-
-    }
 
 }
 
 
+func avplayString(m3u8:String) -> String {
 
+    return m3u8
+
+}
