@@ -15,8 +15,8 @@ let apple_m3u8 = "#EXTM3U\n#EXT-X-PLAYLIST-TYPE:EVENT\n#EXT-X-TARGETDURATION:10\
 class M3u8ResourceLoader: NSObject, AVAssetResourceLoaderDelegate {
 
     /// 假的链接(乱写的，前缀反正不要http或者https，后缀一定要.m3u8，中间随便)
-    fileprivate let m3u8_url_vir = "m3u8Scheme://abcd.m3u8"
-    
+    //fileprivate let m3u8_url_vir = "m3u8Scheme://abcd.m3u8"
+    fileprivate let m3u8_url_vir = "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"
     /// 真的链接
     fileprivate var m3u8_url: String = ""
     
